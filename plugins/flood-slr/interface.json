@@ -1,0 +1,214 @@
+{
+	"infoGraphic": {
+		"show": false,
+		"popup": true,
+		"width":600,
+		"height":400, 
+		"url":"<img style='style='position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);' src='PLUGIN-DIRECTORY/slr_flooding_c.jpg'/>"
+	},
+	"tooltips": {
+		"region": "Geographic areas where climate change/sea level rise vulnerability studies have been conducted.",
+		"hazard": "Spatial extent for different coastal hazards that may affect coastal assets.  Impact zones were estimated across multiple planning horizons.",
+		"climate": "Future planning horizons representing the impact of climate change.",
+		"scenario": "Sea level rise scenarios (low, medium, and high) based on the regional sea level rise amounts.",
+		"hurricane": "Hurrican categories (Saffir-Simpson hurricane wind scale, ranging from 1 to 5) used to model storm surge heights.",
+		"dataSource": "Source of hazard data to be mapped in the application.",
+		"sealevelrise": "Sea level rise inundation scenarios ranging from zero to six feet above mean higher high water (MHHW)."
+	},
+	"region": {
+		"Currituck County": {
+			"url": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+			"layers": {
+				"main": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"hurricane": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"shallow_coastal_flooding": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"fema": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"model_storm": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer"
+			},
+			"tooltips": {
+				"region": "Geographic areas where climate change/sea level rise vulnerability studies have been conducted.",
+				"hazard": "Spatial extent for different coastal hazards that may affect coastal assets.  Impact zones were estimated across multiple planning horizons.",
+				"climate": "Future planning horizons representing the impact of climate change.",
+				"scenario": "Sea level rise scenarios (low, medium, and high) based on regional sea level rise amounts.",
+				"hurricane": "Hurrican categories (Saffir-Simpson hurricane wind scale, ranging from 1 to 5) used to model storm surge heights.",
+				"dataSource": "Source of hazard data to be mapped in the application.",
+				"storm_matthew": "Storm surge, track, and wind swath radii of Hurricane Matthew (2016) based on NOAA's National Hurricane Center best estimates of the location, intensity, and size of a tropical cyclone."
+			},
+			"extent": {
+				"xmin": -8526300.087382287,
+				"ymin": 4304324.538767489,
+				"xmax": -8386038.140479178,
+				"ymax": 4376557.530496882,
+				"spatialReference": {
+					"wkid": 102100,
+					"latestWkid": 3857
+				}
+			},
+			"controls": {
+				"select": {
+					"hazard": {
+						"options": [
+							{
+								"name": " -- ",
+								"value": ""
+							},
+							{
+								"name": "Sea Level Rise",
+								"value": "sea_level_rise",
+								"controls": { 
+									"slider": ["climate", "scenario"]
+								},
+								"description":"Historical sea level trends are available from NOAA tide stations at <a href='https://tidesandcurrents.noaa.gov/sltrends/sltrends_station.shtml?stnid=8651370' target='_blank'>Duck</a> and <a href='https://tidesandcurrents.noaa.gov/sltrends/sltrends_station.shtml?stnid=8652587' target='_blank'>Oregon Inlet</a>."
+							},
+							{
+								"name": "Hurricane Storm Surge",
+								"value": "hurricane",
+								"controls": { "slider": ["hurricane"], "tree":["storm"]  }
+							},
+							{
+								"name": "Shallow Coastal Flooding",
+								"value": "shallow_coastal_flooding",
+								"controls": { "slider": [] }
+							}
+						]
+					},
+					"datasource":{
+						"options": [
+							{ "name": "NOAA Coastal Flood Exposure", "value": "noaa" }
+						]
+					}
+				},
+				"slider": {
+					"climate": { "disabled": false, "show": true, "labels": ["Current", "2045", "2060", "2100"]  },
+					"scenario": { "disabled": false, "show": true, "labels": ["Low", "Medium", "High"] },
+					"hurricane": { "disabled": false, "show": true, "labels": ["1","2","3","4","5"] }
+				},
+				"radiocheck": {
+					"other": { "disabled": false, "show": true, "type": "check", "label": "FEMA Zones (as of 2006)", "layer": "fema", "overlay": true }
+				},
+				"tree": {
+					"storm": { 
+						"label": "Modeled Potential Storm Surge",
+						"displayLabel": true,
+						"displayType": "toggle",
+						"displayIndent": true,
+						"values": [
+							{ 
+								"label": "Hurricane Matthew",
+								"displayLabel": true,
+								"value": "matthew", 
+								"controls": [{ "value":"surge", "label":"Surge" }, { "value":"track", "label":"Track" }, { "value":"swath", "label":"Swath" }],
+								"dependency": {
+									"slider": {
+										"hurricane": { "disabled": true } 
+									}
+								},
+								"layers": { "show": ["model_storm"], "hide": ["hurricane"]  }
+							}
+						]
+					}
+				}
+			},
+			"download": {
+				"report":"https://coast.noaa.gov/floodexposure/#/services#flood-hazards",
+				"data":"https://coast.noaa.gov/floodexposure/#/services#flood-hazards"
+			}
+		},
+		"Dare County": {
+			"url": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+			"layers": {
+				"main": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"hurricane": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"shallow_coastal_flooding": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"fema": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer",
+				"model_storm": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina/Flood_SLR/MapServer"
+			},
+			"tooltips": {
+				"region": "Geographic areas where climate change/sea level rise vulnerability studies have been conducted.",
+				"hazard": "Spatial extent for different coastal hazards that may affect coastal assets.  Impact zones were estimated across multiple planning horizons.",
+				"climate": "Future planning horizons representing the impact of climate change.",
+				"scenario": "Sea level rise scenarios (low, medium, and high) based on regional sea level rise amounts.",
+				"hurricane": "Hurrican categories (Saffir-Simpson hurricane wind scale, ranging from 1 to 5) used to model storm surge heights.",
+				"dataSource": "Source of hazard data to be mapped in the application.",
+				"storm_matthew": "Storm surge, track, and wind swath radii of Hurricane Matthew (2016) based on NOAA's National Hurricane Center best estimates of the location, intensity, and size of a tropical cyclone."
+			},
+			"extent": {
+				"xmin": -8591653.746566305,
+				"ymin": 4178127.005068734,
+				"xmax": -8311129.8527596,
+				"ymax": 4322592.988527773,
+				"spatialReference": {
+					"wkid": 102100,
+					"latestWkid": 3857
+				}
+			},
+			"controls": {
+				"select": {
+					"hazard": {
+						"options": [
+							{
+								"name": " -- ",
+								"value": ""
+							},
+							{
+								"name": "Sea Level Rise",
+								"value": "sea_level_rise",
+								"controls": { "slider": ["climate", "scenario"] },
+								"description":"Historical sea level trends are available from NOAA tide stations at <a href='https://tidesandcurrents.noaa.gov/sltrends/sltrends_station.shtml?stnid=8651370' target='_blank'>Duck</a> and <a href='https://tidesandcurrents.noaa.gov/sltrends/sltrends_station.shtml?stnid=8652587' target='_blank'>Oregon Inlet</a>."
+							},
+							{
+								"name": "Hurricane Storm Surge",
+								"value": "hurricane",
+								"controls": { "slider": ["hurricane"], "tree":["storm"] }
+							},
+							{
+								"name": "Shallow Coastal Flooding",
+								"value": "shallow_coastal_flooding",
+								"controls": { "slider": [] }
+							}
+						]
+					},
+					"datasource":{
+						"options": [
+							{ "name": "NOAA Coastal Flood Exposure", "value": "noaa" }
+						]
+					}
+				},
+				"slider": {
+					"climate": { "disabled": false, "show": true, "labels": ["Current", "2045", "2060", "2100"] },
+					"scenario": { "disabled": false, "show": true, "labels": ["Low", "Medium", "High"] },
+					"hurricane": { "disabled": false, "show": true, "labels": ["1","2","3","4","5"] }
+				},
+				"radiocheck": {
+					"other": { "disabled": false, "show": true, "value": "fema", "type": "check", "label": "FEMA Zones (as of 2006)", "layer": "fema", "overlay": true }
+				},
+				"tree": {
+					"storm": { 
+						"label": "Modeled Potential Storm Surge",
+						"displayLabel": true,
+						"displayType": "toggle",
+						"displayIndent": true,
+						"values": [
+							{ 
+								"label": "Hurricane Matthew",
+								"displayLabel": true,
+								"value": "matthew", 
+								"controls": [{ "value":"surge", "label":"Surge" }, { "value":"track", "label":"Track" }, { "value":"swath", "label":"Swath" }], 
+								"dependency": {
+									"slider": {
+										"hurricane": { "disabled": true } 
+									}
+								},
+								"layers": { "show": ["model_storm"], "hide": ["hurricane"] }
+							}
+						]
+					}
+				}
+			},
+			"download": {
+				"report":"https://coast.noaa.gov/floodexposure/#/services#flood-hazards",
+				"data":"https://coast.noaa.gov/floodexposure/#/services#flood-hazards"
+			}
+		}
+	}
+}

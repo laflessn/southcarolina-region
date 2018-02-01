@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        {
+            "repo": "multiexplorer",
+            "name": "restoration_explorer"
+        },
+        {
+        	"repo": "community-rating-system",
+        	"name": "community-rating-system"
+        },
+        {
+            "repo": "regional-planning",
+            "name": "regional-planning"
+        },
+        {
+            "repo": "flood-slr",
+            "name": "flood-slr"
+        },
+        {
+            "repo": "regional-planning",
+            "name": "community_planning"
+        },
+        {
+            "repo":"living-shorelines-explorer",
+            "name":"living-shorelines-explorer"
+        }
+    ]
+}

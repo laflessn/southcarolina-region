@@ -1,0 +1,61 @@
+{
+	"region": {
+		"Currituck County": {
+			"hurricane|1": [37],
+			"hurricane|2": [38],
+			"hurricane|3": [39],
+			"hurricane|4": [40],
+			"hurricane|5": [41],
+			
+			"shallow_coastal_flooding": [26],
+			
+			"sea_level_rise|current|low": [21,29],
+			"sea_level_rise|current|medium": [21,29],
+			"sea_level_rise|current|high": [21,29],
+			"sea_level_rise|2045|low": [13,29],
+			"sea_level_rise|2045|medium": [14,29],
+			"sea_level_rise|2045|high": [12,29],
+			"sea_level_rise|2060|low": [16,29],
+			"sea_level_rise|2060|medium": [17,29],
+			"sea_level_rise|2060|high": [15,29],
+			"sea_level_rise|2100|low": [19,29],
+			"sea_level_rise|2100|medium": [20,29],
+			"sea_level_rise|2100|high": [18,29],
+			
+			"fema": [23],
+			
+			"model_storm|surge|matthew": [46],
+			"model_storm|track|matthew": [43],
+			"model_storm|swath|matthew": [44]
+		
+		},
+		"Dare County": {
+			"hurricane|1": [31],
+			"hurricane|2": [32],
+			"hurricane|3": [33],
+			"hurricane|4": [34],
+			"hurricane|5": [35],
+			
+			"shallow_coastal_flooding": [27],
+			
+			"sea_level_rise|current|low": [10,29],
+			"sea_level_rise|current|medium": [10,29],
+			"sea_level_rise|current|high": [10,29],
+			"sea_level_rise|2045|low": [2,29],
+			"sea_level_rise|2045|medium": [3,29],
+			"sea_level_rise|2045|high": [1,29],
+			"sea_level_rise|2060|low": [5,29],
+			"sea_level_rise|2060|medium": [6,29],
+			"sea_level_rise|2060|high": [4,29],
+			"sea_level_rise|2100|low": [8,29],
+			"sea_level_rise|2100|medium": [9,29],
+			"sea_level_rise|2100|high": [7,29],
+			
+			"fema": [24],
+			
+			"model_storm|surge|matthew": [45],
+			"model_storm|track|matthew": [43],
+			"model_storm|swath|matthew": [44]
+		}
+	}
+}

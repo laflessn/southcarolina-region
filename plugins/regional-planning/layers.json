@@ -1,0 +1,109 @@
+[
+    {
+        "displayName": "Albemarle and Pamlico Regional Data Layers",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina",
+            "name": "North_Carolina" 
+        },
+        "includeLayers": [
+            {
+                "name": "Bathymetry (m)",
+                "displayName": "Bathymetry (m)"
+            },
+            {
+                "name": "Coastal Management",
+                "displayName": "Coastal Management",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Flood Risk",
+                "displayName": "Flood Risk",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Habitat",
+                "displayName": "Habitat",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Infrastructure_",
+                "displayName": "Infrastructure",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Social and Economic",
+                "displayName": "Social and Economic",
+                "includeAllLayers": true
+            }
+        ]
+    },
+    {
+        "displayName": "Restoration Explorer Layers",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/North_Carolina",
+            "name": "North_Carolina" 
+        },
+        "includeLayers": [
+            {
+                "name": "Depth Score",
+                "displayName": "Depth Score"
+            },
+            {
+                "name": "Sea Bottom Type Score",
+                "displayName": "Sea Bottom Type Score"
+            },
+            {
+                "name": "Salinity Score",
+                "displayName": "Salinity Score"
+            },
+            {
+                "name": "Historic Oyster Reef Score",
+                "displayName": "Historic Oyster Reef Score"
+            },
+            {
+                "name": "Existing Oyster Reef Score",
+                "displayName": "Existing Oyster Reef Score"
+            },
+            {
+                "name": "Proximity to Connected Salt Marsh Score",
+                "displayName": "Proximity to Connected Salt Marsh Score"
+            },
+            {
+                "name": "Shoreline Erosion Score",
+                "displayName": "Shoreline Erosion Score"
+            },
+            {
+                "name": "Water Quality Score",
+                "displayName": "Water Quality Score"
+            },
+            {
+                "name": "Public Accessibility Score",
+                "displayName": "Public Accessibility Score"
+            },
+            {
+                "name": "Proximity to Strategic Habitat Areas",
+                "displayName": "Proximity to Strategic Habitat Areas"
+            },
+            {
+                "name": "Living Shoreline Relative Wind Energy",
+                "displayName": "Living Shoreline Relative Wind/Wave Energy"
+            },
+            {
+                "name": "Living Shoreline Final Score Poly",
+                "displayName": "Living Shoreline Final Score Poly"
+            },
+            {
+                "name": "Living Shoreline Final Score",
+                "displayName": "Living Shoreline Final Score"
+            },
+            {
+                "name": "Living Shoreline Conditions Met for Living Shoreline",
+                "displayName": "Conditions Met for Living Shoreline"
+            }
+        ]
+    }
+]
